@@ -1,4 +1,4 @@
-"""Github Resolver."""
+"""Oracle Resolver."""
 
 import json
 import re
@@ -15,12 +15,12 @@ from aries_cloudagent.resolver.base import (
 from pydid import DID
 
 
-class GithubResolver(BaseDIDResolver):
-    """Github Resolver."""
+class OracleResolver(BaseDIDResolver):
+    """Oracle Resolver."""
 
     def __init__(self):
         super().__init__(ResolverType.NATIVE)
-        self._supported_did_regex = re.compile("^did:github:.*$")
+        self._supported_did_regex = re.compile("^did:oracle:.*$")
 
     @property
     def supported_did_regex(self) -> Pattern:
@@ -28,10 +28,10 @@ class GithubResolver(BaseDIDResolver):
         return self._supported_did_regex
 
     async def setup(self, context):
-        """Setup the github resolver (none required)."""
+        """Setup the oracle resolver (none required)."""
 
     async def _resolve(self, profile: Profile, did: str) -> dict:
-        """Resolve github DIDs."""
+        """Resolve oracle DIDs."""
         as_did = DID(did)
         async with aiohttp.ClientSession() as session:
             async with session.get(
