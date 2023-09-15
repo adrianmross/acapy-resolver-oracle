@@ -9,5 +9,6 @@ from .resolver import OracleResolver
 async def setup(context: InjectionContext):
     """Setup the plugin."""
     registry = context.inject(DIDResolver)
-    assert isinstance(registry, DIDResolver)
-    registry.register(OracleResolver())
+    resolver = OracleResolver()
+    await resolver.setup(context)
+    registry.append(resolver)
