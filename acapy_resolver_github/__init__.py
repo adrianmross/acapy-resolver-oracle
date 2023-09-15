@@ -1,7 +1,7 @@
 """ACA-Py Resolver Github."""
 
 from aries_cloudagent.config.injection_context import InjectionContext
-from aries_cloudagent.resolver.did_resolver_registry import DIDResolverRegistry
+from aries_cloudagent.resolver.did_resolver import DIDResolverRegistry
 
 from .resolver import OracleResolver
 
