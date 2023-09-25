@@ -1,4 +1,4 @@
-# ACA-Py DID Resolver Plugin for did:oracle
+# ACA-Py DID Resolver Plugin for did:orcl
 
 Forked from [acapy_resolver_github](https://github.com/dbluhm/acapy-resolver-github).
 
