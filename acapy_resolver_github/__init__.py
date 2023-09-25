@@ -1,4 +1,4 @@
-"""ACA-Py Resolver Github."""
+"""ACA-Py Resolver Oracle."""
 
 from aries_cloudagent.config.injection_context import InjectionContext
 from aries_cloudagent.resolver.did_resolver import DIDResolver

@@ -20,7 +20,7 @@ class OracleResolver(BaseDIDResolver):
 
     def __init__(self):
         super().__init__(ResolverType.NATIVE)
-        self._supported_did_regex = re.compile("^did:oracle:.*$")
+        self._supported_did_regex = re.compile("^did:orcl:.*$")
 
     @property
     def supported_did_regex(self) -> Pattern:

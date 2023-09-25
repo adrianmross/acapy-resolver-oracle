@@ -1,12 +1,12 @@
 """Test Github Resolver."""
 
 import pytest
-from acapy_resolver_github.resolver import GithubResolver
+from acapy_resolver_oracle.resolver import OracleResolver
 
 
 @pytest.fixture
 def resolver():
-    yield GithubResolver()
+    yield OracleResolver()
 
 
 @pytest.fixture
@@ -16,5 +16,5 @@ def profile():
 
 @pytest.mark.asyncio
 async def test_resolve_dbluhm(resolver, profile):
-    doc = await resolver.resolve(profile, "did:github:dbluhm")
-    assert doc["id"] == "did:github:dbluhm"
+    doc = await resolver.resolve(profile, "did:orcl:test")
+    assert doc["id"] == "did:orcl:test"
